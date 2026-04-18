@@ -1,0 +1,32 @@
+## Create Employee
+POST http://localhost:4000/api/emp
+Content-Type: application/json
+
+{
+    "name":"John Doe",
+    "email":"john.doe@example.com",
+    "mobile":"1234567890",
+    "designation":"Software Engineer",
+    "companyName":"ABC Corp"
+}
+
+### Read Employees
+GET http://localhost:4000/api/emp
+
+
+
+### Update Employee
+PUT http://localhost:4000/api/emp
+Content-Type: application/json
+
+{
+    "id":"69ca1afa9c63b8ff350be66d",
+    "Name":"John Doe Updated",
+    "email":"john.doe.updated@example.com",
+    "mobile":"0987654321",
+    "designation":"Senior Software Engineer",
+    "companyName":"ABC Corp"
+}
+
+### Delete Employee
+DELETE http://localhost:4000/api/emp/69ca28e0acae1db5a8400a2c
