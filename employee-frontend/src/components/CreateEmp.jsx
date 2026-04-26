@@ -89,6 +89,8 @@ function CreateEmp() {
           className="mb-3 border-2 p-3 w-full rounded-2xl"
         />
 
+        {error && <p className="text-red-500 text-center mb-4 text-xl">{error}</p>}
+
         <button type="submit" className="text-2xl rounded-2xl bg-gray-600 text-white block mx-auto p-4">
           Add Emp
         </button>

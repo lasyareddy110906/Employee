@@ -13,24 +13,28 @@ function ListOfEmps() {
     navigate('/edit',{state:empObj});
   }
   const deleteEmployee=async (id)=>{
-    //make http req to delete employee
-    let res=await axiosInstance.delete(`/emp/${id}`)
-    if(res.status===200){
-      alert("employee deleted successfully")
-      //update the list of emps in UI      
-      getEmps();
+    try {
+      let res=await axiosInstance.delete(`/emp/${id}`)
+      if(res.status===200){
+        alert("employee deleted successfully")
+        getEmps();
+      }
+    } catch (err) {
+      console.log("Failed to delete employee:", err);
+      alert("Failed to delete employee");
     }
   }
   async function getEmps() {
+    try {
       let res = await axiosInstance.get("/emp");
-      
       if (res.status === 200) {
         let resObj = await res.data;
-
-        
         setEmps(resObj.employees);
       }
+    } catch (err) {
+      console.log("Failed to fetch employees:", err);
     }
+  }
   useEffect(() => {
     
 
