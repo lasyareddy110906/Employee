@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import axios from "axios";
+import axiosInstance from "../axiosInstance";
 import {counterContextObj} from '../contexts/ContextProvider'
 import {useContext} from 'react'
 
@@ -23,7 +23,7 @@ function CreateEmp() {
     setLoading(true);
     setError("");
 
-    const res = await axios.post("http://localhost:4000/api/emp", newEmpObj);
+    const res = await axiosInstance.post("/emp", newEmpObj);
     if (res.status === 201) {
       alert("Employee Created Successfully");
       navigate("/list");
