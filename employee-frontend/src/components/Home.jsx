@@ -5,7 +5,7 @@ import { useCounterStore } from '../stores/useCounterStore'
 
 function Home() {
   const newCounter = useCounterStore((state)=>state.newCounter)
- 
+  const incrementCounter = useCounterStore((state)=>state.incrementCounter)
 
   console.log("home")
   return (
