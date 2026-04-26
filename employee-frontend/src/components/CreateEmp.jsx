@@ -56,7 +56,7 @@ function CreateEmp() {
       
       <h1 className="text-5xl text-center text-gray-600">Create New Employee</h1>
       {/* form */}
-      <form className=" max-w-md mx-auto mt-10" onSubmit={handleSubmit(onFormSubmit())}>
+      <form className=" max-w-md mx-auto mt-10" onSubmit={handleSubmit(onFormSubmit)}>
         <input
           type="text"
           placeholder="Enter name "
