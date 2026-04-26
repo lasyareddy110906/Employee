@@ -11,7 +11,11 @@ config()
 const app = exp()
 
 //enable cors
-const allowedOrigins = [process.env.FRONTEND_URL, 'http://localhost:5173'].filter(Boolean)
+const allowedOrigins = [
+  process.env.FRONTEND_URL, 
+  'http://localhost:5173',
+  'https://employee-one-orpin.vercel.app'
+].filter(Boolean)
 app.use(cors({
   origin: allowedOrigins,
   credentials: true
