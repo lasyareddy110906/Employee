@@ -11,8 +11,10 @@ function Home() {
 
   console.log("home")
 
-  return (
-    <div className="bg-pink-300 min-h-screen flex flex-col items-center justify-center">
+ return (
+  <div className="bg-pink-300 min-h-screen flex flex-col items-center justify-center">
+
+    <div className="flex flex-col items-center gap-4">
 
       <h1 className="text-2xl font-bold">
         Counter Home: {newCounter}
@@ -20,7 +22,7 @@ function Home() {
 
       <button
         onClick={incrementCounter}
-        className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+        className="bg-blue-500 text-white px-4 py-2 rounded"
       >
         Increment
       </button>
@@ -28,7 +30,9 @@ function Home() {
       <Test />
 
     </div>
-  )
+
+  </div>
+)
 }
 
 export default Home
